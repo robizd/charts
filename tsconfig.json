@@ -19,7 +19,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "elarion-pipes": [
+        "dist/elarion-pipes/elarion-pipes",
+        "dist/elarion-pipes"
+      ],
+      "test-charts": [
+        "dist/test-charts/test-charts",
+        "dist/test-charts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

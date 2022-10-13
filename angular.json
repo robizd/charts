@@ -105,6 +105,68 @@
           }
         }
       }
+    },
+    "test-charts": {
+      "projectType": "library",
+      "root": "projects/test-charts",
+      "sourceRoot": "projects/test-charts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/test-charts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/test-charts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/test-charts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/test-charts/src/test.ts",
+            "tsConfig": "projects/test-charts/tsconfig.spec.json",
+            "karmaConfig": "projects/test-charts/karma.conf.js"
+          }
+        }
+      }
+    },
+    "elarion-pipes": {
+      "projectType": "library",
+      "root": "projects/elarion-pipes",
+      "sourceRoot": "projects/elarion-pipes/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/elarion-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/elarion-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/elarion-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/elarion-pipes/src/test.ts",
+            "tsConfig": "projects/elarion-pipes/tsconfig.spec.json",
+            "karmaConfig": "projects/elarion-pipes/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "charts"
